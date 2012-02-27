@@ -1,0 +1,31 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">What's up?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+            <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+<img border="0" src="/assets/hello.png" alt="Pulpit rock" width="670" height="200" />
+  <h1>What the %$#@ is tech.talk? </h1>
+
+  <p>
+Well, it's an experimental web application written by Aslan Varoqua
+using Ruby on Rails, an MVC framework for the Ruby Programming Language. The application
+is a place where users can post their professional profiles, post their thoughts, look for gigs, 
+and connect with like minded people. Tech companies can also create accounts where web, software, data, and 
+other professionals can easily keep up with their products and services. Tech companies can 
+also advertise their services directly to potential customers who indicate interest in their industries thus increasing the chance of sales. 
+
+In other words, this is social networking for tech enthusiests and the people that do business with them.
+  </p>
+
+  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>

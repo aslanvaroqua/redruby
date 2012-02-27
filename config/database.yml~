@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_dev
+  username: postgres
+  password: pepsiav1
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_test
+  username: postgres
+  password: pepsiav1
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_production

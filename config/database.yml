@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_dev
+  username: postgres
+  password: pepsiav1
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_test
+  username: postgres
+  password: pepsiav1
+  host: localhost
+  port: 5432
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: redruby_production

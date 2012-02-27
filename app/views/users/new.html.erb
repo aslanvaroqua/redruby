@@ -1,0 +1,36 @@
+<h1>Sign up</h1>
+
+ 
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h3> Scheisse! </h3>
+    <p>  <%= pluralize(@user.errors.count, "problem") %> prevented your information from entering the database... </p>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
